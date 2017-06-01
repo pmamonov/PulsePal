@@ -218,7 +218,22 @@ union {
     uint16_t uint16[4];
 } dacValue; // Union allows faster type conversion between 16-bit DAC values and bytes to write via SPI
 
+
+#define LED 13
+#define BLINK_DEL 500
+
+void blink()
+{
+  pinMode(LED, OUTPUT);
+  digitalWrite(LED, LOW);
+  delay(BLINK_DEL);
+  digitalWrite(LED, HIGH);
+  delay(BLINK_DEL);
+  digitalWrite(LED, LOW);
+}
+
 void setup() {
+  blink();
   pinMode(SyncPin, OUTPUT); // Configure SPI bus pins as outputs
   pinMode(LDACPin, OUTPUT);
   SPI.begin();
@@ -280,10 +295,11 @@ void setup() {
     LastLoopTime = SystemTime;
     Timer3.attachInterrupt(handler);
     Timer3.start(50); // Calls handler precisely every 50us
+    blink();
 }
 
 void loop() {
-
+  blink();
 }
 
 void handler(void) {                     
