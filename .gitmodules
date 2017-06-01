@@ -1,0 +1,6 @@
+[submodule "Firmware/PulsePal_2_0_1/LiquidCrystal"]
+	path = Firmware/PulsePal_2_0_1/LiquidCrystal
+	url = https://github.com/arduino-libraries/LiquidCrystal
+[submodule "Firmware/PulsePal_2_0_1/SdFat"]
+	path = Firmware/PulsePal_2_0_1/SdFat
+	url = https://github.com/greiman/SdFat
