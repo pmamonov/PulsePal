@@ -207,7 +207,6 @@ unsigned long SScount = 0; // Counter of idle cycles
 int ConnectedToApp = 0; // 0 if disconnected, 1 if connected
 byte CycleDuration = 50; // in microseconds, time between hardware cycles (each cycle = read trigger channels, update output channels)
 unsigned int CycleFrequency = 20000; // in Hz, same idea as CycleDuration
-void handler(void);
 boolean SoftTriggered[4] = {0}; // If a software trigger occurred this cycle (for timing reasons, it is scheduled to occur on the next cycle)
 boolean SoftTriggerScheduled[4] = {0}; // If a software trigger is scheduled for the next cycle
 unsigned long callbackStartTime = 0;
@@ -218,6 +217,43 @@ union {
     uint16_t uint16[4];
 } dacValue; // Union allows faster type conversion between 16-bit DAC values and bytes to write via SPI
 
+/* Functions declarations */
+void handler(void);
+void digitalWriteDirect(int pin, boolean val);
+byte digitalReadDirect(int pin);
+void ProgramDAC(byte Data1, byte Data2, byte Data3);
+void dacWrite();
+byte RestoreParametersFromSD();
+void LoadDefaultParameters();
+void write2Screen(const char* Line1, const char* Line2);
+void UpdateSettingsMenu();
+void AbortAllPulseTrains();
+byte SerialReadByte();
+void SerialWriteShort(word num);
+void SerialWriteLong(unsigned long num);
+unsigned long SerialReadLong();
+uint16_t SerialReadShort();
+unsigned long ComputePulseDuration(byte myBiphasic,
+				   unsigned long myPhase1,
+				   unsigned long myPhaseInterval,
+				   unsigned long myPhase2);
+void killChannel(byte outputChannel);
+void SaveCurrentProgram2SD();
+void centerText(char myText[]);
+void Software_Reset();
+unsigned int ReturnUserValue(unsigned long LowerLimit,
+			     unsigned long UpperLimit,
+			     unsigned long StepSize,
+			     byte Units);
+void RefreshChannelMenu(int ThisChannel);
+void RefreshActionMenu(int ThisAction);
+void RefreshTriggerMenu(int ThisAction);
+byte skipToFile(unsigned int fileNumber);
+void centerText(char myText[]);
+boolean ReadDebouncedButton();
+void ResetSystemTime();
+const char* FormatNumberForDisplay(unsigned int InputNumber, int Units);
+void HandleReadTimeout();
 
 #define LED 13
 #define BLINK_DEL 500
