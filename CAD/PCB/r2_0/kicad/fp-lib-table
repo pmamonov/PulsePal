@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name "PulsePalSMT_Rev_0_5")(type Legacy)(uri "/home/piton/devel/pulsepal/CAD/PCB/r2_0/kicad/PulsePalSMT_Rev_0_5.mod")(options "")(descr ""))
+)

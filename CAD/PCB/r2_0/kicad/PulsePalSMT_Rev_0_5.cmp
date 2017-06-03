@@ -1,0 +1,374 @@
+Cmp-Mod V01 Created by Cvpcb (2015-02-06 BZR 5410)-product   date = Mon 09 Feb 2015 04:12:04 PM PST
+
+BeginCmp
+TimeStamp = /5932F27B;
+Reference = AGND26;
+ValeurCmp = M01PTH;
+IdModule  = 1X01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F343;
+Reference = ARDUINO26;
+ValeurCmp = DUE(NORMAL);
+IdModule  = DUE(NORMAL);
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F40B;
+Reference = BNC1;
+ValeurCmp = BNC_CONNECTOR;
+IdModule  = BNC_CONNECTOR;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F4D3;
+Reference = BNC2;
+ValeurCmp = BNC_CONNECTOR;
+IdModule  = BNC_CONNECTOR;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F59B;
+Reference = BNC3;
+ValeurCmp = BNC_CONNECTOR;
+IdModule  = BNC_CONNECTOR;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F663;
+Reference = BNC4;
+ValeurCmp = BNC_CONNECTOR;
+IdModule  = BNC_CONNECTOR;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F72B;
+Reference = BNC5;
+ValeurCmp = BNC_CONNECTOR;
+IdModule  = BNC_CONNECTOR;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F7F3;
+Reference = BNC6;
+ValeurCmp = BNC_CONNECTOR;
+IdModule  = BNC_CONNECTOR;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F8BB;
+Reference = C1;
+ValeurCmp = CAP1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932F983;
+Reference = C2;
+ValeurCmp = CAP0603-CAP;
+IdModule  = 0603-CAP;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932FA4B;
+Reference = C3;
+ValeurCmp = CAP1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932FB13;
+Reference = C4;
+ValeurCmp = CAP0603-CAP;
+IdModule  = 0603-CAP;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932FBDB;
+Reference = C5;
+ValeurCmp = CAP1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932FCA3;
+Reference = C6;
+ValeurCmp = CAP0603-CAP;
+IdModule  = 0603-CAP;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932FD6B;
+Reference = C7;
+ValeurCmp = CAP1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932FE33;
+Reference = C8;
+ValeurCmp = CAP1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932FEFB;
+Reference = C9;
+ValeurCmp = CAP1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5932FFC3;
+Reference = C10;
+ValeurCmp = CAP0603-CAP;
+IdModule  = 0603-CAP;
+EndCmp
+
+BeginCmp
+TimeStamp = /5933008B;
+Reference = DGND26;
+ValeurCmp = M01PTH;
+IdModule  = 1X01;
+EndCmp
+
+BeginCmp
+TimeStamp = /5933072F;
+Reference = IC1;
+ValeurCmp = OPTOISOLATOR-2SOIC8;
+IdModule  = SO08-2;
+EndCmp
+
+BeginCmp
+TimeStamp = /593307F7;
+Reference = IC2;
+ValeurCmp = AD5754RBREZ;
+IdModule  = SOP65P640X120-25N;
+EndCmp
+
+BeginCmp
+TimeStamp = /593308BF;
+Reference = IC3;
+ValeurCmp = REG1117;
+IdModule  = SOT223;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330987;
+Reference = JP1;
+ValeurCmp = M16PTH;
+IdModule  = 1X16;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330A4F;
+Reference = JP2;
+ValeurCmp = STAND-OFF;
+IdModule  = STAND-OFF;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330B17;
+Reference = JP5;
+ValeurCmp = STAND-OFF;
+IdModule  = STAND-OFF;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330BDF;
+Reference = JP6;
+ValeurCmp = STAND-OFF;
+IdModule  = STAND-OFF;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330CA7;
+Reference = JP8;
+ValeurCmp = STAND-OFF;
+IdModule  = STAND-OFF;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330D6F;
+Reference = JP9;
+ValeurCmp = STAND-OFF;
+IdModule  = STAND-OFF;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330E37;
+Reference = L1;
+ValeurCmp = WE-CBF-742792118_1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330EFF;
+Reference = L2;
+ValeurCmp = WE-CBF-742792118_1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59330FC7;
+Reference = L3;
+ValeurCmp = WE-CBF-742792118_1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5933108F;
+Reference = LED1;
+ValeurCmp = LEDCHIPLED_1206;
+IdModule  = CHIPLED_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331157;
+Reference = LED2;
+ValeurCmp = LEDCHIPLED_1206;
+IdModule  = CHIPLED_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5933121F;
+Reference = LED3;
+ValeurCmp = LEDCHIPLED_1206;
+IdModule  = CHIPLED_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /593312E7;
+Reference = LED4;
+ValeurCmp = LEDCHIPLED_1206;
+IdModule  = CHIPLED_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /593313AF;
+Reference = LED5;
+ValeurCmp = LEDCHIPLED_1206;
+IdModule  = CHIPLED_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331477;
+Reference = LED6;
+ValeurCmp = LEDCHIPLED_1206;
+IdModule  = CHIPLED_1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /593316CF;
+Reference = R1;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331797;
+Reference = R2;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5933185F;
+Reference = R3;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331927;
+Reference = R4;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /593319EF;
+Reference = R5;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331AB7;
+Reference = R6;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331B7F;
+Reference = R7;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331C47;
+Reference = R8;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331D0F;
+Reference = R9;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331DD7;
+Reference = R10;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331E9F;
+Reference = R11;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /59331F67;
+Reference = R12;
+ValeurCmp = RESISTOR1206;
+IdModule  = 1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /5933202F;
+Reference = THUMB_CONTROLLER26;
+ValeurCmp = JOYSTICKPTH;
+IdModule  = JOYSTICK;
+EndCmp
+
+BeginCmp
+TimeStamp = /593320F7;
+Reference = U$6;
+ValeurCmp = GNDPLANESHRT;
+IdModule  = GNDPLANESHRT;
+EndCmp
+
+BeginCmp
+TimeStamp = /593321BF;
+Reference = U1;
+ValeurCmp = USD-SOCKET;
+IdModule  = MICROSD_1:1;
+EndCmp
+
+BeginCmp
+TimeStamp = /59332287;
+Reference = U2;
+ValeurCmp = TDK_LAMBDA_5_TO_BI_12_125MA;
+IdModule  = TDK_LAMBDA_5_TO_BI_12_125MA;
+EndCmp
+
+EndListe
