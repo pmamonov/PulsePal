@@ -305,23 +305,24 @@ void setup() {
     pinMode(SDChipSelect, OUTPUT);
     // microSD setup
     delay(100);
-    if (!sd.begin(SDChipSelect, SPI_FULL_SPEED)) {
-      sd.initErrorHalt();
+    if (!sd.begin(SDChipSelect, SPI_FULL_SPEED))
+      validProgram = 0;
+    else {
+      if (!sd.chdir("Pulse_Pal")) { // Create/enter a unique folder for Pulse Pal
+        sd.mkdir("Pulse_Pal");
+        sd.chdir("Pulse_Pal");
+      }
+      currentSettingsFileName.toCharArray(currentSettingsFileNameChar, sizeof(currentSettingsFileName));
+      settingsFile.open(currentSettingsFileNameChar, O_READ);
+      validProgram = RestoreParametersFromSD();
     }
-    if (!sd.chdir("Pulse_Pal")) { // Create/enter a unique folder for Pulse Pal
-      sd.mkdir("Pulse_Pal");
-      sd.chdir("Pulse_Pal");
+
+    if (validProgram != 252) { // 252 is the last byte in a real program file, returned from RestoreParametersFromSD()
+      LoadDefaultParameters();
     }
-    currentSettingsFileName.toCharArray(currentSettingsFileNameChar, sizeof(currentSettingsFileName));
-    settingsFile.open(currentSettingsFileNameChar, O_READ);
-    
     for (int x = 0; x < 2; x++) {
       pinMode(InputLEDLines[x], OUTPUT);
       digitalWrite(InputLEDLines[x], LOW);
-    }
-    validProgram = RestoreParametersFromSD();
-    if (validProgram != 252) { // 252 is the last byte in a real program file, returned from RestoreParametersFromSD()
-      LoadDefaultParameters();
     }
     write2Screen(CommanderString," Click for menu");
     DefaultInputLevel = 1 - TriggerLevel;
