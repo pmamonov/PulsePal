@@ -255,21 +255,7 @@ void ResetSystemTime();
 const char* FormatNumberForDisplay(unsigned int InputNumber, int Units);
 void HandleReadTimeout();
 
-#define LED 13
-#define BLINK_DEL 500
-
-void blink()
-{
-  pinMode(LED, OUTPUT);
-  digitalWrite(LED, LOW);
-  delay(BLINK_DEL);
-  digitalWrite(LED, HIGH);
-  delay(BLINK_DEL);
-  digitalWrite(LED, LOW);
-}
-
 void setup() {
-  blink();
   pinMode(SyncPin, OUTPUT); // Configure SPI bus pins as outputs
   pinMode(LDACPin, OUTPUT);
   SPI.begin();
@@ -284,13 +270,7 @@ void setup() {
   }
   ProgramDAC(16, 0, 31); // Power up DACs
   dacWrite(); // Update the DAC
-
-  blink();
-
   SerialUSB.begin(115200); // Initialize Serial USB interface at 115.2kbps
-
-  blink();
-
   // set up the LCD
   lcd.begin(16, 2);
   lcd.clear();
@@ -299,8 +279,6 @@ void setup() {
   delay(100);
   lcd.display() ;
   
-  blink();
-
   // Pin modes
   pinMode(TriggerLines[0], INPUT); // Configure trigger pins as digital inputs
   pinMode(TriggerLines[1], INPUT);
@@ -311,9 +289,6 @@ void setup() {
     digitalWrite(OutputLEDLines[x], LOW); // Initialize channel LEDs to low (off)
   }
     pinMode(SDChipSelect, OUTPUT);
-    
-  blink();
-
     // microSD setup
     delay(100);
     if (!sd.begin(SDChipSelect, SPI_FULL_SPEED))
@@ -335,25 +310,18 @@ void setup() {
       pinMode(InputLEDLines[x], OUTPUT);
       digitalWrite(InputLEDLines[x], LOW);
     }
-    
-  blink();
-
     write2Screen(CommanderString," Click for menu");
-    
-  blink();
-
     DefaultInputLevel = 1 - TriggerLevel;
     InputValuesLastCycle[0] = digitalRead(TriggerLines[0]); // Pre-read trigger channels
     InputValuesLastCycle[1] = digitalRead(TriggerLines[1]);
     SystemTime = 0;
     LastLoopTime = SystemTime;
     Timer3.attachInterrupt(handler);
-//    Timer3.start(50); // Calls handler precisely every 50us
-    blink();
+    Timer3.start(50); // Calls handler precisely every 50us
 }
 
 void loop() {
-  blink();
+
 }
 
 void handler(void) {                     
