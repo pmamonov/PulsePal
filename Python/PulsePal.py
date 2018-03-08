@@ -359,6 +359,13 @@ class PulsePalObject(object):
                 self.linkTriggerChannel2[i] = struct.unpack("B",response[ind])[0]; ind+=1;
             self.triggerMode[1] = struct.unpack("B",response[ind])[0]; ind+=1;
             self.triggerMode[2] = struct.unpack("B",response[ind])[0];
+
+    def analog_read(self):
+        cmd = struct.pack('BB', self.OpMenuByte, 100)
+        self.serialObject.write(cmd)
+        r = self.serialObject.read(4)
+        return struct.unpack("<L", r)
+
     def __str__(self):
         sb = []
         for key in self.__dict__:

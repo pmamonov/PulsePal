@@ -336,7 +336,7 @@ void handler(void) {
         dacWrite(); // Update DAC to final voltages (should be resting voltage)
         DACFlag = 0;
       }
-      UpdateSettingsMenu(); // Check for joystick button click, handle if detected
+//      UpdateSettingsMenu(); // Check for joystick button click, handle if detected
       SystemTime = 0;
       if (!inMenu) { // If at the thumb joystick menu top
         if (useScreenSaver) { // Screensaver logic, if enabled
@@ -663,6 +663,16 @@ void handler(void) {
           }
           settingsFile.rewind();
         } break;
+	case 100: /* read analog input */
+	{
+		int a = analogRead(A8);
+
+		SerialUSB.write(a);
+		SerialUSB.write(a >> 8);
+		SerialUSB.write(a >> 16);
+		SerialUSB.write(a >> 24);
+	}
+	break;
      }
     }
   }
